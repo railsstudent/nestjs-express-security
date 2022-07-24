@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "nest-add": {
+      "description": "Add minimum security to a new nestjs project.",
+      "factory": "./nestjs-security/index#nestjsSecurity"
+    }
+  }
+}
