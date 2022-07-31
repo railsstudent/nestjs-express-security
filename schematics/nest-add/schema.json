@@ -10,6 +10,18 @@
       "description": "Whether or not esModuleInterop is enabled.",
       "x-prompt": "Is esModuleInterop enabled?",
       "default": false
+    },
+    "ttl": {
+      "type": "string",
+      "description": "Time to live in seconds.",
+      "x-prompt": "What is the time to live in seconds?",
+      "default": "60"
+    },
+    "limit": {
+      "type": "string",
+      "description": "Maximum number of requests in ttl.",
+      "x-prompt": "What is the maximum number of requests in ttl?",
+      "default": "1000"
     }
   }
 }

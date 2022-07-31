@@ -6,7 +6,7 @@ export function copyBootstrap(options: Schema): Rule {
   return (tree: Tree, context: SchematicContext) => {
     const objImportStatements = createImportOptions(options)
 
-    const sourceTemplate = url('./files')
+    const sourceTemplate = url('./bootstrap')
     const sourceParameterizedTemplate = apply(sourceTemplate, [
       template({
         ...objImportStatements,
