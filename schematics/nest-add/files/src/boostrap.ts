@@ -1,6 +1,6 @@
 import { INestApplication, ValidationPipe } from '@nestjs/common'
-import * as express from 'express'
-import * as compression from 'compression'
+<%= express %>
+<%= compression %>
 import helmet from 'helmet'
 
 export function addSecurity(app: INestApplication): void {

@@ -1,7 +1,7 @@
 {
   "name": "nestjs-express-security",
   "version": "0.0.1",
-  "description": "Create a schematics to implement security in a NestJS express application",
+  "description": "Create a schematics to implement security in a nestjs express application",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.json",
@@ -24,12 +24,12 @@
   ],
   "author": "",
   "license": "MIT",
-  "bugs": "https://github.com/railsstudent/nestjs-security/issues",
+  "bugs": "https://github.com/railsstudent/nestjs-express-security/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/railsstudent/nestjs-security.git"
+    "url": "https://github.com/railsstudent/nestjs-express-security.git"
   },
-  "homepage": "https://github.com/railsstudent/nestjs-security#readme",
+  "homepage": "https://github.com/railsstudent/nestjs-express-security#readme",
   "schematics": "./dist/collection.json",
   "nest-add": {
     "save": "devDependencies"

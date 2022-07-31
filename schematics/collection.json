@@ -3,7 +3,8 @@
   "schematics": {
     "nest-add": {
       "description": "Add minimum security to a new nestjs project.",
-      "factory": "./nest-add/index#nestjsSecurity"
+      "factory": "./nest-add/index#nestjsSecurity",
+      "schema": "./nest-add/schema.json"
     }
   }
 }

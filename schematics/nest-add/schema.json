@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "SchematicsNestAdd",
+  "title": "Nest Add Schema",
+  "description": "Add security to nestjs express applicesModuleInteropation",
+  "type": "object",
+  "properties": {
+    "isEsModuleInteropEnabled": {
+      "type": "boolean",
+      "description": "Whether or not esModuleInterop is enabled.",
+      "x-prompt": "Is esModuleInterop enabled?",
+      "default": false
+    }
+  }
+}
