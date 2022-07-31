@@ -41,3 +41,9 @@ export const classTransformerDep: NodeDependency = {
   type: NodeDependencyType.Default,
   version: '~0.5.1',
 }
+
+export const throttlerDep: NodeDependency = {
+  name: '@nestjs/throttler',
+  type: NodeDependencyType.Default,
+  version: '^2.0.1',
+}

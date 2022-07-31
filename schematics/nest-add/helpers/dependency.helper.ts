@@ -1,6 +1,15 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics'
 import { addPackageJsonDependency, getPackageJsonDependency, NodeDependency } from '@schematics/angular/utility/dependencies'
-import { helmetDep, compressionDep, typesCompression, expressDep, typesExpress, classValidatorDep, classTransformerDep } from '../constants'
+import {
+  helmetDep,
+  compressionDep,
+  typesCompression,
+  expressDep,
+  typesExpress,
+  classValidatorDep,
+  classTransformerDep,
+  throttlerDep,
+} from '../constants'
 
 export function installDependencies(): Rule {
   return (tree: Tree, context: SchematicContext) => {
@@ -12,6 +21,7 @@ export function installDependencies(): Rule {
       typesExpress,
       classTransformerDep,
       classValidatorDep,
+      throttlerDep,
     ]
     addDependencies(tree, context, Array.from(dependencies))
     return tree

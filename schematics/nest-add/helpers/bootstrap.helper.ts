@@ -28,6 +28,6 @@ function createImportOptions(options: Schema) {
 
   return {
     express: `import * as express from 'express'`,
-    compression: `import * as compression from 'compression'`,
+    compression: `import compression = require('compression')`,
   }
 }
