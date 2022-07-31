@@ -1,43 +1,43 @@
 import { NodeDependency, NodeDependencyType } from '@schematics/angular/utility/dependencies'
 
-export const eslintPluginRxjs: NodeDependency = {
-  name: 'eslint-plugin-rxjs',
-  type: NodeDependencyType.Dev,
-  version: '~5.0.2',
+export const helmetDep: NodeDependency = {
+  name: 'helmet',
+  type: NodeDependencyType.Default,
+  version: '~5.1.1',
 }
 
-export const cspell: NodeDependency = {
-  name: 'cspell',
-  type: NodeDependencyType.Dev,
-  version: '~6.1.1',
+export const expressDep: NodeDependency = {
+  name: 'express',
+  type: NodeDependencyType.Default,
+  version: '~4.18.1',
 }
 
-export const commitlintCli: NodeDependency = {
-  name: '@commitlint/cli',
+export const typesExpress: NodeDependency = {
+  name: '@types/express',
   type: NodeDependencyType.Dev,
-  version: '~17.0.2',
+  version: '~4.17.13',
 }
 
-export const commitlintConfigConvention: NodeDependency = {
-  name: '@commitlint/config-conventional',
-  type: NodeDependencyType.Dev,
-  version: '~17.0.2',
+export const compressionDep: NodeDependency = {
+  name: 'compression',
+  type: NodeDependencyType.Default,
+  version: '~1.7.4',
 }
 
-export const husky: NodeDependency = {
-  name: 'husky',
+export const typesCompression: NodeDependency = {
+  name: '@types/compression',
   type: NodeDependencyType.Dev,
-  version: '~8.0.1',
+  version: '~1.7.2',
 }
 
-export const lintStaged: NodeDependency = {
-  name: 'lint-staged',
-  type: NodeDependencyType.Dev,
-  version: '~13.0.0',
+export const classValidatorDep: NodeDependency = {
+  name: 'class-validator',
+  type: NodeDependencyType.Default,
+  version: '~0.13.2',
 }
 
-export const eslintSonarjs: NodeDependency = {
-  name: 'eslint-plugin-sonarjs',
-  type: NodeDependencyType.Dev,
-  version: '~0.13.0',
+export const classTransformerDep: NodeDependency = {
+  name: 'class-transformer',
+  type: NodeDependencyType.Default,
+  version: '~0.5.1',
 }

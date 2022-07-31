@@ -1,15 +1,17 @@
 {
-  "name": "nestjs-security",
+  "name": "nestjs-express-security",
   "version": "0.0.1",
-  "description": "Create a schematics to implement NestJS security",
+  "description": "Create a schematics to implement security in a NestJS express application",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js",
     "copy:collection": "cpx schematics/collection.json dist && cpx 'schematics/**/schema.json' dist",
-    "copy:schematics": "cpx 'schematics/**/files/*' dist",
+    "copy:schematics": "cpx 'schematics/**/files/**/*' dist",
     "postbuild": "npm run copy:collection && npm run copy:schematics",
-    "manual-test": "npm run build && schematics .:nest-add"
+    "manual-test": "npm run build && schematics .:nest-add",
+    "lint": "eslint \"schematics/**/*.ts\" --fix",
+    "format": "prettier --write ."
   },
   "keywords": [
     "schematics",
@@ -17,16 +19,17 @@
     "security",
     "cors",
     "helmet",
-    "validation"
+    "validation",
+    "rate limit"
   ],
   "author": "",
   "license": "MIT",
-  "bugs": "https://github.com/railsstudent/nestjs-linit-tools/issues",
+  "bugs": "https://github.com/railsstudent/nestjs-security/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/railsstudent/nestjs-lint-tools.git"
+    "url": "https://github.com/railsstudent/nestjs-security.git"
   },
-  "homepage": "https://github.com/railsstudent/nestjs-lint-tools#readme",
+  "homepage": "https://github.com/railsstudent/nestjs-security#readme",
   "schematics": "./dist/collection.json",
   "nest-add": {
     "save": "devDependencies"
@@ -42,11 +45,17 @@
     "@types/express": "4.17.13",
     "@types/jasmine": "4.0.0",
     "@types/node": "^14.15.0",
+    "@typescript-eslint/eslint-plugin": "5.31.0",
+    "@typescript-eslint/parser": "5.27.1",
     "compression": "1.7.4",
     "cpx": "1.5.0",
+    "eslint": "8.20.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
     "express": "4.18.1",
     "helmet": "5.1.1",
     "jasmine": "4.0.0",
+    "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "typescript": "4.7.2"
   }

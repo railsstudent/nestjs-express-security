@@ -1,0 +1,5 @@
+dist/**/*.js
+dist/**/*.js.map
+dist/**/*.d.ts
+
+schematics/nest-add/files/**/*

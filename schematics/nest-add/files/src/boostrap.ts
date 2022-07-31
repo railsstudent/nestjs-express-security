@@ -11,7 +11,7 @@ export function addSecurity(app: INestApplication): void {
     app.use(express.urlencoded({ extended: true }))
 }
 
-export function addValidation(app: INestApplication) {
+export function addValidationConfig(app: INestApplication) {
     app.useGlobalPipes(
         new ValidationPipe({
           whitelist: true,

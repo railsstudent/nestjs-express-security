@@ -1,31 +1,18 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics'
 import { addPackageJsonDependency, getPackageJsonDependency, NodeDependency } from '@schematics/angular/utility/dependencies'
-import { commitlintCli, commitlintConfigConvention, cspell, eslintPluginRxjs, eslintSonarjs, husky, lintStaged } from '../constants'
-import { Schema } from '../schema'
+import { helmetDep, compressionDep, typesCompression, expressDep, typesExpress, classValidatorDep, classTransformerDep } from '../constants'
 
-export function installDependencies(options: Schema): Rule {
+export function installDependencies(): Rule {
   return (tree: Tree, context: SchematicContext) => {
-    const dependencies = new Set<NodeDependency>()
-    if (options.isAddCspell) {
-      dependencies.add(cspell)
-    }
-
-    if (options.isAddCommitlint) {
-      dependencies.add(commitlintCli).add(commitlintConfigConvention).add(husky)
-    }
-
-    if (options.isAddEslintRxjs) {
-      dependencies.add(eslintPluginRxjs)
-    }
-
-    if (options.isAddEslintSonarJs) {
-      dependencies.add(eslintSonarjs)
-    }
-
-    if (options.isAddLintStaged) {
-      dependencies.add(lintStaged).add(husky)
-    }
-
+    const dependencies: NodeDependency[] = [
+      helmetDep,
+      compressionDep,
+      typesCompression,
+      expressDep,
+      typesExpress,
+      classTransformerDep,
+      classValidatorDep,
+    ]
     addDependencies(tree, context, Array.from(dependencies))
     return tree
   }
